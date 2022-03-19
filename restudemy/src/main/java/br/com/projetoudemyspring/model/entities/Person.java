@@ -1,4 +1,4 @@
-package br.com.projetoudemyspring.data.entities;
+package br.com.projetoudemyspring.model.entities;
 
 import java.io.Serializable;
 
@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Table(name = "tb_person")
+@Table(name = "person")
 @Entity
 public class Person implements Serializable {
 
@@ -47,5 +47,8 @@ public class Person implements Serializable {
 	@NotNull(message = "Gender field cannot be null")
 	@Column
 	private String gender;
+	
+	@NotNull(message = "Enable field cannot be null")
+	private Boolean enabled;
 
 }

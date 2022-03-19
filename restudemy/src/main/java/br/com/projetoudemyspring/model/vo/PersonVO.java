@@ -1,4 +1,4 @@
-package br.com.projetoudemyspring.data.vo;
+package br.com.projetoudemyspring.model.vo;
 
 import java.io.Serializable;
 
@@ -30,5 +30,6 @@ public class PersonVO extends RepresentationModel<PersonVO> implements Serializa
 
 	private String gender;
 	
+	private Boolean enabled;
 
 }

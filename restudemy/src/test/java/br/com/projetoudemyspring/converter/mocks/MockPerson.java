@@ -3,8 +3,8 @@ package br.com.projetoudemyspring.converter.mocks;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.projetoudemyspring.data.entities.Person;
-import br.com.projetoudemyspring.data.vo.PersonVO;
+import br.com.projetoudemyspring.model.entities.Person;
+import br.com.projetoudemyspring.model.vo.PersonVO;
 
 public class MockPerson {
 	public Person mockEntity() {

@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "642290c2-7989-4a93-8efc-a27d7435323a",
+		"_postman_id": "afd14ac0-2a32-419e-9441-646e505fd1cd",
 		"name": "RESTful API With Spring Boot 2.6.3",
 		"description": "RESTFul API study application.\n\nContact Support:\n Name: Diego Brandão\n Email: diego.brandao@outlook.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -18,6 +18,16 @@
 								{
 									"name": "Returns a single book, by your id",
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearer_token}}",
+													"type": "string"
+												}
+											]
+										},
 										"method": "GET",
 										"header": [
 											{
@@ -26,12 +36,11 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/book/v1/:id",
+											"raw": "{{host}}api/book/v1/:id",
 											"host": [
-												"{{baseUrl}}"
+												"{{host}}api"
 											],
 											"path": [
-												"api",
 												"book",
 												"v1",
 												":id"
@@ -39,7 +48,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "30863834",
+													"value": "-20201797",
 													"description": "(Required) id"
 												}
 											]
@@ -65,7 +74,7 @@
 													"variable": [
 														{
 															"key": "id",
-															"value": "30863834",
+															"value": "-20201797",
 															"description": "(Required) id"
 														}
 													]
@@ -81,7 +90,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "{\n  \"author\": \"quis\",\n  \"id\": 84886133,\n  \"launchDate\": \"1988-09-16T14:11:47.237Z\",\n  \"links\": {\n    \"empty\": false\n  },\n  \"price\": 29941541.535116076,\n  \"title\": \"reprehenderit cillum\"\n}"
+											"body": "{\n  \"author\": \"amet est eiusmod ex\",\n  \"id\": -55124123,\n  \"launchDate\": \"2008-02-13T05:51:04.532Z\",\n  \"links\": {\n    \"empty\": true\n  },\n  \"price\": -82525718.51132417,\n  \"title\": \"non a\"\n}"
 										},
 										{
 											"name": "Unauthorized",
@@ -102,7 +111,7 @@
 													"variable": [
 														{
 															"key": "id",
-															"value": "30863834",
+															"value": "-20201797",
 															"description": "(Required) id"
 														}
 													]
@@ -139,7 +148,7 @@
 													"variable": [
 														{
 															"key": "id",
-															"value": "30863834",
+															"value": "-20201797",
 															"description": "(Required) id"
 														}
 													]
@@ -176,7 +185,7 @@
 													"variable": [
 														{
 															"key": "id",
-															"value": "30863834",
+															"value": "-20201797",
 															"description": "(Required) id"
 														}
 													]
@@ -199,6 +208,16 @@
 								{
 									"name": "Delete a book",
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearer_token}}",
+													"type": "string"
+												}
+											]
+										},
 										"method": "DELETE",
 										"header": [
 											{
@@ -207,12 +226,11 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/book/v1/:id",
+											"raw": "{{host}}api/book/v1/:id",
 											"host": [
-												"{{baseUrl}}"
+												"{{host}}api"
 											],
 											"path": [
-												"api",
 												"book",
 												"v1",
 												":id"
@@ -220,7 +238,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "30863834",
+													"value": "-20201797",
 													"description": "(Required) id"
 												}
 											]
@@ -246,7 +264,7 @@
 													"variable": [
 														{
 															"key": "id",
-															"value": "30863834",
+															"value": "-20201797",
 															"description": "(Required) id"
 														}
 													]
@@ -283,7 +301,7 @@
 													"variable": [
 														{
 															"key": "id",
-															"value": "30863834",
+															"value": "-20201797",
 															"description": "(Required) id"
 														}
 													]
@@ -320,7 +338,7 @@
 													"variable": [
 														{
 															"key": "id",
-															"value": "30863834",
+															"value": "-20201797",
 															"description": "(Required) id"
 														}
 													]
@@ -357,7 +375,7 @@
 													"variable": [
 														{
 															"key": "id",
-															"value": "30863834",
+															"value": "-20201797",
 															"description": "(Required) id"
 														}
 													]
@@ -382,6 +400,16 @@
 						{
 							"name": "Returns a list of all registered books",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearer_token}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [
 									{
@@ -390,12 +418,11 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/api/book/v1",
+									"raw": "{{host}}api/book/v1",
 									"host": [
-										"{{baseUrl}}"
+										"{{host}}api"
 									],
 									"path": [
-										"api",
 										"book",
 										"v1"
 									]
@@ -429,7 +456,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  {\n    \"author\": \"aliquip irure \",\n    \"id\": 82682703,\n    \"launchDate\": \"1942-05-03T10:26:13.109Z\",\n    \"links\": {\n      \"empty\": false\n    },\n    \"price\": 89162281.17848954,\n    \"title\": \"deserunt exercitation ex eiusmod reprehenderit\"\n  },\n  {\n    \"author\": \"dolore\",\n    \"id\": -87160634,\n    \"launchDate\": \"1965-08-14T15:54:45.426Z\",\n    \"links\": {\n      \"empty\": true\n    },\n    \"price\": 53840558.30972114,\n    \"title\": \"comm\"\n  }\n]"
+									"body": "[\n  {\n    \"author\": \"sunt ea qui\",\n    \"id\": -43394671,\n    \"launchDate\": \"1963-11-03T16:31:15.672Z\",\n    \"links\": {\n      \"empty\": false\n    },\n    \"price\": 91505070.409727,\n    \"title\": \"elit cupidatat dolor ea aliqua\"\n  },\n  {\n    \"author\": \"aliqua esse voluptate deserunt\",\n    \"id\": -38187882,\n    \"launchDate\": \"2013-02-22T06:34:18.169Z\",\n    \"links\": {\n      \"empty\": false\n    },\n    \"price\": 88579213.49957043,\n    \"title\": \"aliquip non do occaecat\"\n  }\n]"
 								},
 								{
 									"name": "Unauthorized",
@@ -523,6 +550,16 @@
 						{
 							"name": "Add (save) a book",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearer_token}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "POST",
 								"header": [
 									{
@@ -536,7 +573,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"author\": \"in deserunt aliqua sit\",\n  \"id\": -30938593,\n  \"launchDate\": \"1946-10-10T18:32:07.667Z\",\n  \"links\": [\n    {\n      \"deprecation\": \"amet dolor qui sed\",\n      \"href\": \"exercitation occaecat\",\n      \"hreflang\": \"nulla commodo\",\n      \"media\": \"non aliqua ad officia\",\n      \"name\": \"qui veli\",\n      \"profile\": \"commodo pariatur\",\n      \"rel\": {},\n      \"title\": \"laboris ad incididunt\",\n      \"type\": \"do voluptate dolor in ipsum\"\n    },\n    {\n      \"deprecation\": \"ut dolore proident sit sunt\",\n      \"href\": \"fugiat do esse\",\n      \"hreflang\": \"ipsum\",\n      \"media\": \"est mollit dolor\",\n      \"name\": \"et magna\",\n      \"profile\": \"magna\",\n      \"rel\": {},\n      \"title\": \"elit ex reprehenderit\",\n      \"type\": \"sunt elit\"\n    }\n  ],\n  \"price\": -57230847.79090821,\n  \"title\": \"do\"\n}",
+									"raw": "{\n  \"author\": \"exercitation aliquip\",\n  \"id\": 54585257,\n  \"launchDate\": \"2005-05-25T07:08:07.544Z\",\n  \"links\": [\n    {\n      \"deprecation\": \"anim deserunt\",\n      \"href\": \"ex laboris\",\n      \"hreflang\": \"dolore labore fugiat laboris cupidatat\",\n      \"media\": \"anim et ea\",\n      \"name\": \"irure sunt\",\n      \"profile\": \"magna sunt esse irure\",\n      \"rel\": {},\n      \"title\": \"et\",\n      \"type\": \"eu dolor qui sunt\"\n    },\n    {\n      \"deprecation\": \"eiusmod\",\n      \"href\": \"labor\",\n      \"hreflang\": \"commodo\",\n      \"media\": \"eu anim magna do\",\n      \"name\": \"cillum do\",\n      \"profile\": \"ut\",\n      \"rel\": {},\n      \"title\": \"do ad velit\",\n      \"type\": \"est culpa cill\"\n    }\n  ],\n  \"price\": -76467197.39168537,\n  \"title\": \"dolor\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -544,12 +581,11 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/book/v1",
+									"raw": "{{host}}api/book/v1",
 									"host": [
-										"{{baseUrl}}"
+										"{{host}}api"
 									],
 									"path": [
-										"api",
 										"book",
 										"v1"
 									]
@@ -583,7 +619,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"author\": \"quis\",\n  \"id\": 84886133,\n  \"launchDate\": \"1988-09-16T14:11:47.237Z\",\n  \"links\": {\n    \"empty\": false\n  },\n  \"price\": 29941541.535116076,\n  \"title\": \"reprehenderit cillum\"\n}"
+									"body": "{\n  \"author\": \"amet est eiusmod ex\",\n  \"id\": -55124123,\n  \"launchDate\": \"2008-02-13T05:51:04.532Z\",\n  \"links\": {\n    \"empty\": true\n  },\n  \"price\": -82525718.51132417,\n  \"title\": \"non a\"\n}"
 								},
 								{
 									"name": "Created",
@@ -706,6 +742,16 @@
 						{
 							"name": "Updates the attributes of a book",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearer_token}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "PUT",
 								"header": [
 									{
@@ -719,7 +765,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"author\": \"cillum\",\n  \"id\": 24869937,\n  \"launchDate\": \"1976-07-19T22:33:18.229Z\",\n  \"links\": [\n    {\n      \"deprecation\": \"qui in\",\n      \"href\": \"ullamco Excepteur\",\n      \"hreflang\": \"dolore Excepteur Ut\",\n      \"media\": \"est dolore ut\",\n      \"name\": \"in non\",\n      \"profile\": \"laborum eiusmod ut adipisicing\",\n      \"rel\": {},\n      \"title\": \"est commodo\",\n      \"type\": \"incididunt dolor id minim Ut\"\n    },\n    {\n      \"deprecation\": \"sit adipisicing magna officia\",\n      \"href\": \"Excepteur Duis ea veniam\",\n      \"hreflang\": \"consectetur dolor cillum ex\",\n      \"media\": \"sunt aliquip quis occaecat magna\",\n      \"name\": \"laborum dolore ex culpa proident\",\n      \"profile\": \"amet ullamco ea\",\n      \"rel\": {},\n      \"title\": \"dolor voluptate aliqua ea ut\",\n      \"type\": \"enim pariatur cupidatat\"\n    }\n  ],\n  \"price\": 18570449.96766986,\n  \"title\": \"aute anim reprehenderit quis est\"\n}",
+									"raw": "{\n  \"author\": \"elit\",\n  \"id\": 58906980,\n  \"launchDate\": \"2001-09-29T23:01:32.244Z\",\n  \"links\": [\n    {\n      \"deprecation\": \"qui labore\",\n      \"href\": \"dolor velit\",\n      \"hreflang\": \"fugiat dolore laborum adipisicing\",\n      \"media\": \"culpa cupid\",\n      \"name\": \"et voluptate\",\n      \"profile\": \"labore\",\n      \"rel\": {},\n      \"title\": \"dolore eiusmod aute sint\",\n      \"type\": \"ullamco sit\"\n    },\n    {\n      \"deprecation\": \"dolore in dolor enim\",\n      \"href\": \"ut labore\",\n      \"hreflang\": \"velit eiusmod\",\n      \"media\": \"commodo elit sit ut\",\n      \"name\": \"officia\",\n      \"profile\": \"ut mag\",\n      \"rel\": {},\n      \"title\": \"irure quis aliquip dolore laborum\",\n      \"type\": \"sunt Ut\"\n    }\n  ],\n  \"price\": -50700950.51850241,\n  \"title\": \"eu cupidatat culpa aliqua\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -727,12 +773,11 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/book/v1",
+									"raw": "{{host}}api/book/v1",
 									"host": [
-										"{{baseUrl}}"
+										"{{host}}api"
 									],
 									"path": [
-										"api",
 										"book",
 										"v1"
 									]
@@ -766,7 +811,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"author\": \"quis\",\n  \"id\": 84886133,\n  \"launchDate\": \"1988-09-16T14:11:47.237Z\",\n  \"links\": {\n    \"empty\": false\n  },\n  \"price\": 29941541.535116076,\n  \"title\": \"reprehenderit cillum\"\n}"
+									"body": "{\n  \"author\": \"amet est eiusmod ex\",\n  \"id\": -55124123,\n  \"launchDate\": \"2008-02-13T05:51:04.532Z\",\n  \"links\": {\n    \"empty\": true\n  },\n  \"price\": -82525718.51132417,\n  \"title\": \"non a\"\n}"
 								},
 								{
 									"name": "Created",
@@ -897,6 +942,16 @@
 								{
 									"name": "Returns a single person, by their id",
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearer_token}}",
+													"type": "string"
+												}
+											]
+										},
 										"method": "GET",
 										"header": [
 											{
@@ -905,22 +960,14 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/person/v1/:id",
+											"raw": "{{host}}api/person/v1/1",
 											"host": [
-												"{{baseUrl}}"
+												"{{host}}api"
 											],
 											"path": [
-												"api",
 												"person",
 												"v1",
-												":id"
-											],
-											"variable": [
-												{
-													"key": "id",
-													"value": "30863834",
-													"description": "(Required) id"
-												}
+												"1"
 											]
 										}
 									},
@@ -944,7 +991,7 @@
 													"variable": [
 														{
 															"key": "id",
-															"value": "30863834",
+															"value": "-20201797",
 															"description": "(Required) id"
 														}
 													]
@@ -960,7 +1007,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "{\n  \"address\": \"deserunt reprehenderit eu pariatur\",\n  \"firstName\": \"dolore quis commodo ad\",\n  \"gender\": \"magna\",\n  \"id\": -51579973,\n  \"lastName\": \"dolor Ut quis Lore\",\n  \"links\": {\n    \"empty\": false\n  }\n}"
+											"body": "{\n  \"address\": \"ad culpa ut nulla\",\n  \"firstName\": \"nulla mollit\",\n  \"gender\": \"reprehenderit in\",\n  \"id\": 81687019,\n  \"lastName\": \"sunt ad proident veniam\",\n  \"links\": {\n    \"empty\": true\n  }\n}"
 										},
 										{
 											"name": "Unauthorized",
@@ -981,7 +1028,7 @@
 													"variable": [
 														{
 															"key": "id",
-															"value": "30863834",
+															"value": "-20201797",
 															"description": "(Required) id"
 														}
 													]
@@ -1018,7 +1065,7 @@
 													"variable": [
 														{
 															"key": "id",
-															"value": "30863834",
+															"value": "-20201797",
 															"description": "(Required) id"
 														}
 													]
@@ -1055,7 +1102,199 @@
 													"variable": [
 														{
 															"key": "id",
-															"value": "30863834",
+															"value": "-20201797",
+															"description": "(Required) id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Disable a specific person by your ID",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearer_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}api/person/v1/1",
+											"host": [
+												"{{host}}api"
+											],
+											"path": [
+												"person",
+												"v1",
+												"1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-20201797",
+															"description": "(Required) id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"address\": \"ad culpa ut nulla\",\n  \"firstName\": \"nulla mollit\",\n  \"gender\": \"reprehenderit in\",\n  \"id\": 81687019,\n  \"lastName\": \"sunt ad proident veniam\",\n  \"links\": {\n    \"empty\": true\n  }\n}"
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-20201797",
+															"description": "(Required) id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-20201797",
+															"description": "(Required) id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-20201797",
 															"description": "(Required) id"
 														}
 													]
@@ -1078,6 +1317,16 @@
 								{
 									"name": "Delete a person",
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearer_token}}",
+													"type": "string"
+												}
+											]
+										},
 										"method": "DELETE",
 										"header": [
 											{
@@ -1086,12 +1335,11 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/person/v1/:id",
+											"raw": "{{host}}api/person/v1/:id",
 											"host": [
-												"{{baseUrl}}"
+												"{{host}}api"
 											],
 											"path": [
-												"api",
 												"person",
 												"v1",
 												":id"
@@ -1099,7 +1347,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "30863834",
+													"value": "-20201797",
 													"description": "(Required) id"
 												}
 											]
@@ -1125,7 +1373,7 @@
 													"variable": [
 														{
 															"key": "id",
-															"value": "30863834",
+															"value": "-20201797",
 															"description": "(Required) id"
 														}
 													]
@@ -1162,7 +1410,7 @@
 													"variable": [
 														{
 															"key": "id",
-															"value": "30863834",
+															"value": "-20201797",
 															"description": "(Required) id"
 														}
 													]
@@ -1199,7 +1447,7 @@
 													"variable": [
 														{
 															"key": "id",
-															"value": "30863834",
+															"value": "-20201797",
 															"description": "(Required) id"
 														}
 													]
@@ -1236,7 +1484,7 @@
 													"variable": [
 														{
 															"key": "id",
-															"value": "30863834",
+															"value": "-20201797",
 															"description": "(Required) id"
 														}
 													]
@@ -1261,6 +1509,16 @@
 						{
 							"name": "Returns a list of all registered people",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearer_token}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [
 									{
@@ -1269,14 +1527,17 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/api/person/v1",
+									"raw": "http://localhost:8080/api/person/v1/",
+									"protocol": "http",
 									"host": [
-										"{{baseUrl}}"
+										"localhost"
 									],
+									"port": "8080",
 									"path": [
 										"api",
 										"person",
-										"v1"
+										"v1",
+										""
 									]
 								}
 							},
@@ -1308,7 +1569,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  {\n    \"address\": \"ipsum aute sed cupidatat\",\n    \"firstName\": \"commod\",\n    \"gender\": \"incididunt cupidatat ip\",\n    \"id\": 17941647,\n    \"lastName\": \"dolor pariatur nostrud commodo\",\n    \"links\": {\n      \"empty\": true\n    }\n  },\n  {\n    \"address\": \"sunt est sed amet\",\n    \"firstName\": \"reprehenderit exer\",\n    \"gender\": \"non quis sint\",\n    \"id\": -50533300,\n    \"lastName\": \"in\",\n    \"links\": {\n      \"empty\": false\n    }\n  }\n]"
+									"body": "[\n  {\n    \"address\": \"deserunt incididunt Ut laboris\",\n    \"firstName\": \"aliquip sunt magna ut\",\n    \"gender\": \"magna esse ea sunt dolor\",\n    \"id\": -94106616,\n    \"lastName\": \"ex aliqua do\",\n    \"links\": {\n      \"empty\": true\n    }\n  },\n  {\n    \"address\": \"ipsum eiusmod officia sit\",\n    \"firstName\": \"nisi\",\n    \"gender\": \"in\",\n    \"id\": 22512003,\n    \"lastName\": \"amet ut ullamco adipisicing\",\n    \"links\": {\n      \"empty\": true\n    }\n  }\n]"
 								},
 								{
 									"name": "Unauthorized",
@@ -1402,6 +1663,16 @@
 						{
 							"name": "Add (save) a person",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearer_token}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "POST",
 								"header": [
 									{
@@ -1415,7 +1686,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"address\": \"commodo eu\",\n  \"firstName\": \"dolore amet veniam\",\n  \"gender\": \"aliqua elit\",\n  \"id\": 27632907,\n  \"lastName\": \"officia commodo ad dolore\",\n  \"links\": [\n    {\n      \"deprecation\": \"est commodo eiusmod\",\n      \"href\": \"velit nostrud enim\",\n      \"hreflang\": \"ut commodo magna ut\",\n      \"media\": \"incididunt\",\n      \"name\": \"in sed\",\n      \"profile\": \"esse aliqua sit eiusmod ut\",\n      \"rel\": {},\n      \"title\": \"Lorem consectetur\",\n      \"type\": \"cupidatat aliquip ut\"\n    },\n    {\n      \"deprecation\": \"magna minim\",\n      \"href\": \"est non\",\n      \"hreflang\": \"pariatur consectetur et\",\n      \"media\": \"Duis eu\",\n      \"name\": \"irure enim ea\",\n      \"profile\": \"labore exercitation inc\",\n      \"rel\": {},\n      \"title\": \"amet\",\n      \"type\": \"occaecat labore\"\n    }\n  ]\n}",
+									"raw": "{\n  \"address\": \"culpa ea tempor aliqua minim\",\n  \"firstName\": \"consequat ame\",\n  \"gender\": \"qui deserunt\",\n  \"id\": -17061988,\n  \"lastName\": \"velit laboru\",\n  \"links\": [\n    {\n      \"deprecation\": \"est dolore deserunt Duis\",\n      \"href\": \"adipisicing dolore ut\",\n      \"hreflang\": \"in amet sit\",\n      \"media\": \"reprehenderit elit\",\n      \"name\": \"magna et nulla irure cupidatat\",\n      \"profile\": \"dolore mo\",\n      \"rel\": {},\n      \"title\": \"aute\",\n      \"type\": \"ullamco\"\n    },\n    {\n      \"deprecation\": \"aute\",\n      \"href\": \"occaecat\",\n      \"hreflang\": \"officia nulla in\",\n      \"media\": \"fugiat sunt qui incididunt\",\n      \"name\": \"consequat ut in\",\n      \"profile\": \"eiusmod fugiat ea\",\n      \"rel\": {},\n      \"title\": \"culpa nulla \",\n      \"type\": \"aliquip pariatur in\"\n    }\n  ]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1423,12 +1694,11 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/person/v1",
+									"raw": "{{host}}api/person/v1",
 									"host": [
-										"{{baseUrl}}"
+										"{{host}}api"
 									],
 									"path": [
-										"api",
 										"person",
 										"v1"
 									]
@@ -1462,7 +1732,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"address\": \"deserunt reprehenderit eu pariatur\",\n  \"firstName\": \"dolore quis commodo ad\",\n  \"gender\": \"magna\",\n  \"id\": -51579973,\n  \"lastName\": \"dolor Ut quis Lore\",\n  \"links\": {\n    \"empty\": false\n  }\n}"
+									"body": "{\n  \"address\": \"ad culpa ut nulla\",\n  \"firstName\": \"nulla mollit\",\n  \"gender\": \"reprehenderit in\",\n  \"id\": 81687019,\n  \"lastName\": \"sunt ad proident veniam\",\n  \"links\": {\n    \"empty\": true\n  }\n}"
 								},
 								{
 									"name": "Created",
@@ -1585,6 +1855,16 @@
 						{
 							"name": "Updates a person's attributes",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearer_token}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "PUT",
 								"header": [
 									{
@@ -1598,7 +1878,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"address\": \"voluptate do\",\n  \"firstName\": \"ex adipisicing do quis\",\n  \"gender\": \"velit\",\n  \"id\": -80208411,\n  \"lastName\": \"dolor laborum\",\n  \"links\": [\n    {\n      \"deprecation\": \"nisi et\",\n      \"href\": \"elit dolor eiusmod\",\n      \"hreflang\": \"exercitation pariatur velit dolo\",\n      \"media\": \"occaecat amet sed exercitation laboris\",\n      \"name\": \"ut commodo labore\",\n      \"profile\": \"aliquip non ex commodo\",\n      \"rel\": {},\n      \"title\": \"dolor\",\n      \"type\": \"laborum non sit et\"\n    },\n    {\n      \"deprecation\": \"non \",\n      \"href\": \"eiusmod dolore c\",\n      \"hreflang\": \"sit dolore ad\",\n      \"media\": \"culpa anim ut\",\n      \"name\": \"fugiat irure magna aliqua do\",\n      \"profile\": \"non elit\",\n      \"rel\": {},\n      \"title\": \"id in consectetur laborum\",\n      \"type\": \"laboris ut dolor Ut\"\n    }\n  ]\n}",
+									"raw": "{\n  \"address\": \"ut ut\",\n  \"firstName\": \"nulla Ut ad labore voluptate\",\n  \"gender\": \"sunt esse\",\n  \"id\": -64238014,\n  \"lastName\": \"laborum id ad\",\n  \"links\": [\n    {\n      \"deprecation\": \"minim est voluptate sint\",\n      \"href\": \"irure ex anim\",\n      \"hreflang\": \"fugiat voluptate\",\n      \"media\": \"reprehenderit in minim\",\n      \"name\": \"Lorem dolor cupidatat sunt\",\n      \"profile\": \"ex dolor\",\n      \"rel\": {},\n      \"title\": \"quis dolor pariatur\",\n      \"type\": \"fugiat consectetur sint eiusmo\"\n    },\n    {\n      \"deprecation\": \"aliqua\",\n      \"href\": \"est dolore \",\n      \"hreflang\": \"dolore nulla nisi sit\",\n      \"media\": \"fugiat nostrud non laboris\",\n      \"name\": \"consequat ad\",\n      \"profile\": \"dolore qui cillum id nulla\",\n      \"rel\": {},\n      \"title\": \"laboris veniam irure\",\n      \"type\": \"id magna aute tempor\"\n    }\n  ]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1606,12 +1886,11 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/person/v1",
+									"raw": "{{host}}api/person/v1",
 									"host": [
-										"{{baseUrl}}"
+										"{{host}}api"
 									],
 									"path": [
-										"api",
 										"person",
 										"v1"
 									]
@@ -1645,7 +1924,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"address\": \"deserunt reprehenderit eu pariatur\",\n  \"firstName\": \"dolore quis commodo ad\",\n  \"gender\": \"magna\",\n  \"id\": -51579973,\n  \"lastName\": \"dolor Ut quis Lore\",\n  \"links\": {\n    \"empty\": false\n  }\n}"
+									"body": "{\n  \"address\": \"ad culpa ut nulla\",\n  \"firstName\": \"nulla mollit\",\n  \"gender\": \"reprehenderit in\",\n  \"id\": 81687019,\n  \"lastName\": \"sunt ad proident veniam\",\n  \"links\": {\n    \"empty\": true\n  }\n}"
 								},
 								{
 									"name": "Created",
@@ -1766,6 +2045,39 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "Login",
+					"item": [
+						{
+							"name": "Authenticates a user and returns a token",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" :\"diego\",\r\n    \"password\" : \"admin123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/auth/signin",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		}
@@ -1773,7 +2085,7 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "//localhost:8090",
+			"value": "//localhost:8080",
 			"type": "string"
 		}
 	]

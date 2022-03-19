@@ -8,8 +8,8 @@ import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.Test;
 
 import br.com.projetoudemyspring.converter.mocks.MockPerson;
-import br.com.projetoudemyspring.data.entities.Person;
-import br.com.projetoudemyspring.data.vo.PersonVO;
+import br.com.projetoudemyspring.model.entities.Person;
+import br.com.projetoudemyspring.model.vo.PersonVO;
 
 public class DozerConverterTest {
 	

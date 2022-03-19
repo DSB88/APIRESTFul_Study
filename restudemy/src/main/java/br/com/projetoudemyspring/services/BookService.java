@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import br.com.projetoudemyspring.converter.DozerConverter;
-import br.com.projetoudemyspring.data.entities.Book;
-import br.com.projetoudemyspring.data.vo.BookVO;
 import br.com.projetoudemyspring.handlerexception.EntityNotFoundException;
+import br.com.projetoudemyspring.model.entities.Book;
+import br.com.projetoudemyspring.model.vo.BookVO;
 import br.com.projetoudemyspring.repositories.BookRepository;
 
 @Service

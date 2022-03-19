@@ -1,4 +1,4 @@
-package br.com.projetoudemyspring.data.entities;
+package br.com.projetoudemyspring.model.entities;
 
 import java.io.Serializable;
 import java.util.Date;

@@ -3,11 +3,12 @@ package br.com.projetoudemyspring.services;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import br.com.projetoudemyspring.converter.DozerConverter;
-import br.com.projetoudemyspring.data.entities.Person;
-import br.com.projetoudemyspring.data.vo.PersonVO;
 import br.com.projetoudemyspring.handlerexception.EntityNotFoundException;
+import br.com.projetoudemyspring.model.entities.Person;
+import br.com.projetoudemyspring.model.vo.PersonVO;
 import br.com.projetoudemyspring.repositories.PersonRepository;
 
 @Service
@@ -46,6 +47,14 @@ public class PersonService {
 
 		PersonVO vo = DozerConverter.parseObject(personRepository.save(entity), PersonVO.class);
 		return vo;
+	}
+	
+	@Transactional
+	public PersonVO disablePerson(Long id) {
+		personRepository.disablePersons(id);
+		Person entity = personRepository.findById(id)
+				.orElseThrow(() -> new EntityNotFoundException("No records found for this ID"));
+		return DozerConverter.parseObject(entity, PersonVO.class);
 	}
 
 	public void delete(Long id) {
