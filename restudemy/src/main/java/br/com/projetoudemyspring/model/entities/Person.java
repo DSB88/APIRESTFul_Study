@@ -48,7 +48,7 @@ public class Person implements Serializable {
 	@Column
 	private String gender;
 	
-	@NotNull(message = "Enable field cannot be null")
+	@NotNull(message = "Enabled field cannot be null")
 	private Boolean enabled;
 
 }
