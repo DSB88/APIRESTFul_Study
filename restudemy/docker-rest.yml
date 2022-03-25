@@ -1,0 +1,21 @@
+version: "3.4"
+services: 
+  rest-udemy:
+    container_name: rest-udemy
+    build: ./restudemy
+    command: "mvn clean spring-boot:run"
+    depends_on: 
+      db:
+        condition: service_started
+    environment: 
+      SPRING_BOOT_ENVIRONMENT: Production
+      TZ: America/Sao_Paulo   
+    ports: 
+      - "8080:8080"
+    expose: [8080]
+    restart: always
+    volumes: 
+      - "./restudemy:/restudemy"
+      - "~/.m2:/root/.m2"
+    working_dir: /restudemy
+
